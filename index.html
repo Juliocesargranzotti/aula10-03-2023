@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" type="text/js"></script>
+    <title>Calculadora</title>
+
+    <style>
+        body{
+
+            background-color: black  ;
+            font-family: Times;
+        }
+
+        .flex-container {
+        display: flex;
+        justify-content: center;
+
+        }
+
+        h1{
+            display: flex;
+        justify-content: center;
+        font-family: Times;
+        }
+        
+        
+  
+  
+        
+    </style>
+</head>
+
+<body style="background-color: whitesmoke">
+    <h1>Calculadora</h1>
+
+    <div class="flex-container">
+    <form>
+
+        <input id="v1" type="text"/>
+        <input id="v2" type="text"/>
+        <button type="button" onclick="operacao('+')" value="somar"> +</button>
+        <button type="button" onclick="operacao('-')"> - </button>
+        <button type="button" onclick="operacao('*')"> * </button>
+        <button type="button" onclick="operacao('/')"> / </button><br />
+
+        <input type="text" disabled id="resultado" >
+    </form>
+    </div>
+
+    
+
+
+    <script>
+        function operacao(op){
+
+            var valor1 = parseFloat(document.getElementById("v1").value);
+            var valor2 = parseFloat(document.getElementById("v2").value);
+            var resultado = document.getElementById("resultado");
+            var resultado_conta;
+            
+            
+            switch (op) {
+                case"+":
+                    resultado_conta = valor1 + valor2;
+                    break;
+
+                case "-":
+                    resultado_conta = valor1 - valor2;
+                    break;
+                case "*":
+                    resultado_conta = valor1 * valor2;
+                    break;
+                 case "/":
+                    resultado_conta = valor1 / valor2;
+                    break;
+            
+
+            }
+
+            resultado.value = resultado_conta;
+        }
+       
+    </script>
+</body>
+</html>
