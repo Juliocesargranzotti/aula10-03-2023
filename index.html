@@ -7,52 +7,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="script.js" type="text/js"></script>
     <title>Calculadora</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sono:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sono:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
 
     <style>
-        body{
-
-            background-color: black  ;
-            font-family: Times;
+        
+        body
+        button{
+                border-bottom-color: darkgray;
+                border: darkgrey;
+                margin: 0px 4px;
+                
         }
 
         .flex-container {
         display: flex;
         justify-content: center;
-
+        
         }
+       
 
         h1{
             display: flex;
         justify-content: center;
-        font-family: Times;
+        font-family: 'Sono', sans-serif;
         }
         
-        
-  
-  
         
     </style>
 </head>
 
-<body style="background-color: whitesmoke">
-    <h1>Calculadora</h1>
 
+<body style="background-color: darkgray">
+
+    <div class="titulo ">
+    <h1>Calculadora</h1>
+    </div>
+    
     <div class="flex-container">
+        
     <form>
 
-        <input id="v1" type="text"/>
-        <input id="v2" type="text"/>
-        <button type="button" onclick="operacao('+')" value="somar"> +</button>
-        <button type="button" onclick="operacao('-')"> - </button>
-        <button type="button" onclick="operacao('*')"> * </button>
-        <button type="button" onclick="operacao('/')"> / </button><br />
-
-        <input type="text" disabled id="resultado" >
+        <div class="v1">
+        <input id="v1" type="text" placeholder="Adicione um Numero"/>
+        </div>
+        <div class="v2">
+        <input id="v2" type="text" placeholder="Adicione um Numero"/>
+        </div>
+    
+        <div class="flex-container">
+        <button type="button" onclick="operacao('+')" value="somar"> Soma</button>
+        <button type="button" onclick="operacao('-')"> Subtração </button>
+        <button type="button" onclick="operacao('*')"> Multiplicação </button>
+        <button type="button" onclick="operacao('/')"> Divisão </button><br />
+        </div>
+        <div class="resultado">
+            <input type="text"  id="resultado" placeholder="Resultado" >
+        </div>
+        
+        
     </form>
     </div>
-
-    
-
 
     <script>
         function operacao(op){
@@ -85,5 +108,6 @@
         }
        
     </script>
+
 </body>
 </html>
